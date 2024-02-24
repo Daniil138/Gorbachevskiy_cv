@@ -4,23 +4,19 @@ a = np.array([3, 2, 1], dtype="uint8" )
 
 assert a.dtype == "uint8"
 
-b = np.array([[0,0,0,0,0],
-     [0,0,0,0,0],
-     [0,0,0,0,0],
-     [0,0,0,0,0],
-     [0,0,0,0,0]])
+b = np.zeros((5,5))
 
 assert b.shape == (5, 5) and b.sum() == 0
 
-c = np.array([[[1],[1],[1]]])
+c = np.ones((1,1,3))
 
 assert c.ndim == 3 and c.sum() / c.size == 1
 
-d = np.array([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4])
+d = np.arange(-5,5)
 
 assert np.all(d == np.array([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]))
 
-e = np.array([0., 0.25, 0.5, 0.75, 1.0])
+e = np.arange(0., 1. + 0.25 ,0.25)
 
 assert np.all(e == np.array([0., 0.25, 0.5, 0.75, 1.0]))
 
