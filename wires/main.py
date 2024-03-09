@@ -17,13 +17,12 @@ for i in range(1, np.max(im1)+1):
     if max_broke==0:
         print("Провод", p, "полностью не исправет")
         p+=1
-        continue
-    if max_broke==1:
+    elif max_broke==1:
         print("Провод", p, "полностью  исправет")
         p+=1
-        continue
-    print(f"Провод {p} порван на {np.max(sub)}")
-    p+=1
+    else:
+        print(f"Провод {p} порван на {np.max(sub)}")
+        p+=1
         
 
 
