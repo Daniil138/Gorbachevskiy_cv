@@ -5,24 +5,20 @@ import numpy as np
 
 
 im1 = np.load('lect 1/wires6.npy.txt')
-p=1
 im1 = label(im1)
 
 
 for i in range(1, np.max(im1)+1):
-    sub = im1 == p
+    sub = im1 == i
     sub = binary_erosion(sub)
     sub = label(sub)
     max_broke = np.max(sub)
     if max_broke==0:
-        print("Провод", p, "полностью не исправет")
-        p+=1
+        print("Провод", i, "полностью не исправет")
     elif max_broke==1:
-        print("Провод", p, "полностью  исправет")
-        p+=1
+        print("Провод", i, "полностью  исправет")
     else:
-        print(f"Провод {p} порван на {max_broke}")
-        p+=1
+        print(f"Провод {i} порван на {max_broke}")
         
 
 
