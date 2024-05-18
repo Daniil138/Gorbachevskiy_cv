@@ -18,7 +18,7 @@ def upper_update(value):
     global upper
     upper = value
 
-
+#
 def find_paper_and_crop(thres):
     global pp_rect, pp_dst, maxW, maxH
 
